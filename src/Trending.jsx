@@ -22,16 +22,17 @@ const css = {
   }
 
 
-function Trending(props) {
+function Trending({data, search}) {
   return (
     <Flex
       direction="column"
       align="flex-start"
       overflowX="hidden"
+      marginLeft={[4, 4, 0]}
       
       // class="no-scroll"
     >
-      <Heading h="40px" color="white" marginBottom={5}>
+      <Heading h="40px" color="white" marginBottom={5} fontWeight={[300, 400, 700]}>
         Trending
       </Heading>
       <Flex
@@ -44,17 +45,18 @@ function Trending(props) {
         maxW="90vw"
       style={{scrollbarWidth: "none"}}
       >
-        {props.data
+        {data
           .filter((item) => item.isTrending)
+          .filter(item => item.title.toLowerCase().startsWith(search.toLowerCase()))
           .map((item) => {
             console.log(item);
             return (
               <Box key={item.title + "key"} position="relative">
                 <AspectRatio
-                  w="500px"
-                  h="250px"
+                  w={["250px", "500px"]}
+                  h={["150px", "250px"]}
                   ratio={1.5 / 1}
-                  marginRight="3rem"
+                  marginRight={[3, 3, "3rem"]}
                 >
                   <Image
                     alt={item.title}

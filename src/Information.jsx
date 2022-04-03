@@ -19,7 +19,7 @@ function Information({ item }) {
   return (
     <Flex
       position="absolute"
-      bottom="10%"
+      bottom={["45%", null, "10%"]}
       left="5%"
       color="white"
       direction="column"

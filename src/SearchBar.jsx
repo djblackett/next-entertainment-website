@@ -1,8 +1,8 @@
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
-import React from "react";
+import React, { useState } from "react";
 
-function SearchBar() {
+function SearchBar({ handleChange }) {
   return (
     <InputGroup alignSelf="center">
       <InputLeftElement pointerEvents="none">
@@ -13,6 +13,8 @@ function SearchBar() {
         placeholder="Search for movies or TV series"
         bg="transparent"
         border="none"
+        color="gray.500"
+        onChange={handleChange}
       />
     </InputGroup>
   );
