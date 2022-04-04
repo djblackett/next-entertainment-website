@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import BookmarkButton from "./BookmarkButton";
 import Information from "./Information";
+import TrendingItem from "./TrendingItem";
 
 
 const css = {
@@ -20,6 +21,10 @@ const css = {
       '-ms-overflow-style': 'none',
     },
   }
+
+  const position = {position: "absolute",
+      bottom: ["45%", null, "10%"],
+      left:"5%"}
 
 
 function Trending({data, search}) {
@@ -41,6 +46,7 @@ function Trending({data, search}) {
         direction="row"
         justify="space-between"
         overflowX="scroll"
+        overflowY="hidden"
         h="250px"
         maxW="90vw"
       style={{scrollbarWidth: "none"}}
@@ -52,24 +58,11 @@ function Trending({data, search}) {
             console.log(item);
             return (
               <Box key={item.title + "key"} position="relative">
-                <AspectRatio
-                  w={["250px", "500px"]}
-                  h={["150px", "250px"]}
-                  ratio={1.5 / 1}
-                  marginRight={[3, 3, "3rem"]}
-                >
-                  <Image
-                    alt={item.title}
-                    src={item.thumbnail.trending.large}
-                    height="100%"
-                    width="100%"
-                    borderRadius="16px"
-                  />
-                </AspectRatio>
+                <TrendingItem item={item}/>
 
                 <BookmarkButton />
 
-                <Information item={item} />
+                <Information item={item} position={"absolute"} />
               </Box>
             );
           })}

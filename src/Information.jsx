@@ -15,17 +15,17 @@ const seriesSVG = (
   />
 );
 
-function Information({ item }) {
+function Information({ item, position }) {
   return (
     <Flex
-      position="absolute"
+      position={position}
       bottom={["45%", null, "10%"]}
       left="5%"
       color="white"
       direction="column"
     >
       <Flex justify="space-between">
-        <Text fontWeight="300">
+        <Text fontWeight="300" fontSize={["xs", "md", "md"]}>
           {item.year + " · "} &nbsp;
           <Icon viewBox="0 0 16 16" boxSize={4}>
             {item.category === "Movie" ? movieSVG : seriesSVG}
@@ -34,7 +34,7 @@ function Information({ item }) {
           {item.rating}
         </Text>
       </Flex>
-      <Heading size="md" letterSpacing="0.2">
+      <Heading size={["sm", "md", "lg"]} letterSpacing="0.2">
         {item.title}
       </Heading>
     </Flex>

@@ -7,9 +7,17 @@ import { Container, Grid, GridItem } from "@chakra-ui/react";
 import data from "../src/data.json";
 import Trending from "../src/Trending";
 import React, {useState} from 'react';
+import Recommended from "../src/Recommended";
 
 // const info = JSON.parse(data);
-
+const css = {
+    '&::-webkit-scrollbar': {
+      display: 'none',
+    },
+    ".no-class": {
+      '-ms-overflow-style': 'none',
+    },
+  }
 export default function Home() {
 
   const [search, setSearch] = useState("");
@@ -35,14 +43,17 @@ export default function Home() {
         <title>Frontend Mentor | Entertainment web app</title>
       </Head>
       <Grid
+      css="css"
+      className="no-scroll"
         w="100%"
-        h={["100%"]}
+        h="100%"
         minH="100vh"
-        templateRows={["auto auto auto", "130px 295px 556px"]}
+        templateRows={["auto auto 200px", "100px 295px 556px"]}
         gap={[2, 2, 0]}
         bg="#10141E"
-        templateColumns={["1fr", "1fr", "164px 1fr"]}
-        overflow="hidden"
+        templateColumns={["1fr", "1fr", "120px 1fr"]}
+        overflowX="hidden"
+        overflowY="scroll"
         alignItems="start"
         alignContent={["start", "start", "center"]}
       >
@@ -55,10 +66,9 @@ export default function Home() {
         <GridItem>
           <Trending data={data} search={search}></Trending>
         </GridItem>
-        Search for movies or TV series Trending
-        {/* -- Display trending shows - */}
-        Recommended for you
-        {/* <!-- Display recommended shows --> */}
+        <GridItem>
+          <Recommended data={data} search={search}/>
+        </GridItem>
       </Grid>
     </div>
   );
