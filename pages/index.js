@@ -1,15 +1,15 @@
 import Head from "next/head";
-import Image from "next/image";
-import SearchBar from "../src/SearchBar";
+import SearchBar from "../src/components/SearchBar";
 import styles from "../styles/Home.module.css";
-import Menu from "../src/Menu";
-import { Container, Grid, GridItem } from "@chakra-ui/react";
-import data from "../src/data.json";
-import Trending from "../src/Trending";
+import Menu from "../src/components/Menu";
+import { Grid, GridItem } from "@chakra-ui/react";
+import Trending from "../src/components/Trending";
 import React, {useState} from 'react';
-import Recommended from "../src/Recommended";
+import Recommended from "../src/components/Recommended";
+import { selectMovies } from "../src/features/moviesSlice";
+import { useSelector } from "react-redux";
+import { selectSearchTerm } from "../src/features/searchSlice";
 
-// const info = JSON.parse(data);
 const css = {
     '&::-webkit-scrollbar': {
       display: 'none',
@@ -20,15 +20,12 @@ const css = {
   }
 export default function Home() {
 
-  const [search, setSearch] = useState("");
-
-  function handleChange(e) {
-    setSearch(e.target.value);
-  }
+  
+  const data = useSelector(selectMovies);
+  const searchTerm = useSelector(selectSearchTerm);
 
   return (
     <div className={styles.container}>
-      {/* <div> */}
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,8 +40,8 @@ export default function Home() {
         <title>Frontend Mentor | Entertainment web app</title>
       </Head>
       <Grid
-      css="css"
-      className="no-scroll"
+        css={css}
+        className="no-scroll"
         w="100%"
         h="100%"
         minH="100vh"
@@ -53,23 +50,33 @@ export default function Home() {
         bg="#10141E"
         templateColumns={["1fr", "1fr", "120px 1fr"]}
         overflowX="hidden"
-        overflowY="scroll"
         alignItems="start"
         alignContent={["start", "start", "center"]}
       >
         <GridItem rowSpan={["1", "1", "3"]} justifySelf="center" marginTop={[0, 0, 5]}>
-          <Menu />
+          <Menu selected={"home"}/>
         </GridItem>
         <GridItem alignSelf="center">
-          <SearchBar handleChange={handleChange}/>
+          <SearchBar text={"Search for movies or TV series"}/>
         </GridItem>
+        
+        {searchTerm === "" &&
+        <> 
         <GridItem>
-          <Trending data={data} search={search}></Trending>
+          <Trending data={data} ></Trending>
         </GridItem>
-        <GridItem>
-          <Recommended data={data} search={search}/>
+        <GridItem >
+          <Recommended data={data}  text={"Recommended for you"} marginTop={[5, 5, 10]}/>
         </GridItem>
+        </>
+        }
+
+        {searchTerm !== "" && 
+        <GridItem >
+          <Recommended data={data}  text={"Recommended for you"} marginTop={[5, 5, 10]}/>
+        </GridItem>}
       </Grid>
     </div>
+
   );
 }

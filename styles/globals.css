@@ -15,12 +15,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-.no-scroll {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.no-scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
-}

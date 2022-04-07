@@ -19,10 +19,11 @@ function Information({ item, position }) {
   return (
     <Flex
       position={position}
-      bottom={["45%", null, "10%"]}
+      bottom="10%"
       left="5%"
       color="white"
       direction="column"
+      marginTop={2}
     >
       <Flex justify="space-between">
         <Text fontWeight="300" fontSize={["xs", "md", "md"]}>
@@ -34,7 +35,12 @@ function Information({ item, position }) {
           {item.rating}
         </Text>
       </Flex>
-      <Heading size={["sm", "md", "lg"]} letterSpacing="0.2">
+      <Heading
+        size={["sm", "md", "lg"]}
+        letterSpacing="0.2"
+        marginTop={["-5px", 0, 0]}
+        fontWeight="500"
+      >
         {item.title}
       </Heading>
     </Flex>

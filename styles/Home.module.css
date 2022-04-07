@@ -1,7 +1,5 @@
 .container {
   padding: 0;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
 .main {
@@ -12,11 +10,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.no-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-.container::-webkit-scrollbar {
+.main::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
 
