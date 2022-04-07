@@ -66,7 +66,12 @@ function Recommended({ text, filter, marginTop }) {
         objectFit="fill"
         justifyItems={["center", "center", "start"]}
         className="no-class"
-        templateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]}
+        templateColumns={[
+          "repeat(2, 1fr)",
+          null,
+          "repeat(3, 1fr)",
+          "repeat(4, 1fr)",
+        ]}
         templateRows="auto"
         gap={[2, 4, 6]}
       >

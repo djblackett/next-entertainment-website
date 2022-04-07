@@ -14,17 +14,17 @@ const Menu = () => {
       backgroundColor="#161D2F"
       border="none"
       borderRadius={[0, 0, "14px"]}
-      direction={["row", "row", "column"]}
+      direction={["row", null, null, null, "column"]}
       align="center"
-      justifyContent={["space-between", "space-between", "flex-start"]}
-      h={["8vh", "10vh", "90vh"]}
-      w={["100vw", "100%", 24]}
+      justifyContent={["space-between", null, null, null, "flex-start"]}
+      h={["8vh", "10vh", null, null, "90vh"]}
+      w={["100vw", null, null, null, 24]}
       p={6}
     >
       <Icon
         viewBox="0 0 32 25.6"
         boxSize={[6, 6, 8]}
-        marginBottom={[0, 0, 15]}
+        marginBottom={[0, null, null, null, 15]}
         alignSelf="center"
       >
         <path
@@ -34,8 +34,9 @@ const Menu = () => {
       </Icon>
       <Flex
         align="center"
-        direction={["row", "row", "column"]}
-        marginTop={[0, 0, 16]}
+        direction={["row", null, null, null, "column"]}
+        marginTop={[0, null, null, null, 16]}
+        marginLeft={[5, null, null, null, 0]}
         maxW={["50%", "50%", "initial"]}
       >
         <Box>

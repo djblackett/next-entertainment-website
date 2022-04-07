@@ -45,15 +45,15 @@ export default function Home() {
         w="100%"
         h="100%"
         minH="100vh"
-        templateRows={["auto auto 200px", "100px 295px 556px"]}
+        templateRows={["auto 75px auto 200px", null, null, null, "100px 300px auto"]}
         gap={[2, 2, 0]}
         bg="#10141E"
-        templateColumns={["1fr", "1fr", "120px 1fr"]}
+        templateColumns={["1fr", null, null, null, "120px 1fr"]}
         overflowX="hidden"
         alignItems="start"
-        alignContent={["start", "start", "center"]}
+        alignContent={["start", null, null, null, "center"]}
       >
-        <GridItem rowSpan={["1", "1", "3"]} justifySelf="center" marginTop={[0, 0, 5]}>
+        <GridItem rowSpan={["1", null, null, null, "3"]} justifySelf="center" marginTop={[0, null, null, null, 5]}>
           <Menu selected={"home"}/>
         </GridItem>
         <GridItem alignSelf="center">

@@ -16,10 +16,13 @@ function Trending({ data }) {
   const searchTerm = useSelector(selectSearchTerm);
   return (
     <Flex
+      css={css}
+      className="no-scroll"
       direction="column"
       align="flex-start"
-      overflowX="hidden"
+      overflowX="scroll"
       marginLeft={[4, 4, 0]}
+      maxWidth={["100vw", null, null, null, "1400px"]}
     >
       <Heading h="40px" color="white" marginBottom={5} fontWeight="300">
         Trending
@@ -29,12 +32,14 @@ function Trending({ data }) {
         className="no-scroll"
         direction="row"
         justify="space-between"
-        overflowX="scroll"
+        // overflowX="scroll"
         overflowY="visible"
         h="auto"
-        maxW="90vw"
+        w="auto"
+        // maxW="100%"
         style={{ scrollbarWidth: "none" }}
-        // _focus={{ border: "2px" }}
+        paddingop={2}
+        paddingBottom={2}
       >
         {data
           .filter((item) => item.isTrending)

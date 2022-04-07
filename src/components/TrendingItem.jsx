@@ -12,13 +12,6 @@ const MovieBox = styled(Flex)`
 
 function TrendingItem({ item }) {
   return (
-    // <AspectRatio
-    //   w={["250px", "500px"]}
-    //   h={["150px", "250px"]}
-    //   ratio={1.5 / 1}
-    //   marginRight={[3, 3, "3rem"]}
-    //   cursor="pointer"
-    // >
     <MovieBox
       alt={item.title}
       backgroundImage={[
@@ -26,8 +19,6 @@ function TrendingItem({ item }) {
         `url(${item.thumbnail.trending.large})`,
         `url(${item.thumbnail.trending.large})`,
       ]}
-      // height="100%"
-      // width="100%"
       h={["150px", "230px"]}
       w={["250px", "470px"]}
       align="center"
@@ -43,7 +34,6 @@ function TrendingItem({ item }) {
       <PlayButton />
       <Information item={item} position={"absolute"} />
     </MovieBox>
-    // </AspectRatio>
   );
 }
 
