@@ -13,6 +13,7 @@ function SearchBar({ text }) {
       outline="none"
       border="none"
       maxW={"90vw"}
+      marginLeft={[5, null, null, null, 0]}
     >
       <InputLeftElement pointerEvents="none">
         <Search2Icon color="gray.300" />

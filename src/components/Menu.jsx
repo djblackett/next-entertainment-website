@@ -13,13 +13,17 @@ const Menu = () => {
     <Flex
       backgroundColor="#161D2F"
       border="none"
-      borderRadius={[0, 0, "14px"]}
+      borderRadius={[0, null, "14px"]}
       direction={["row", null, null, null, "column"]}
       align="center"
       justifyContent={["space-between", null, null, null, "flex-start"]}
-      h={["8vh", "10vh", null, null, "90vh"]}
-      w={["100vw", null, null, null, 24]}
+      h={["8vh", null, null, null, "90vh"]}
+      w={["100vw", null, "100%", null, 24]}
       p={6}
+      justifySelf={["center", null, null, null, "initial"]}
+      alignSelf="center"
+      marginLeft={[0, null, 5, null, 0]}
+      marginRight={[0, null, 5, null, 0]}
     >
       <Icon
         viewBox="0 0 32 25.6"
@@ -96,7 +100,7 @@ const Menu = () => {
           </a>
         </Link>
       </Flex>
-      <Spacer display={["none", "none", "initial"]} />
+      <Spacer display={["none", null, null, null, "initial"]} />
       <Avatar
         name="The Dude"
         src="assets/image-avatar.png"

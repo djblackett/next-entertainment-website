@@ -19,8 +19,8 @@ function TrendingItem({ item }) {
         `url(${item.thumbnail.trending.large})`,
         `url(${item.thumbnail.trending.large})`,
       ]}
-      h={["150px", "230px"]}
-      w={["250px", "470px"]}
+      h={["140px", "230px"]}
+      w={["240px", "470px"]}
       align="center"
       justify="center"
       marginRight={["1rem", "2rem", "3rem"]}

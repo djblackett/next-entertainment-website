@@ -44,6 +44,7 @@ export default function Home() {
         className="no-scroll"
         w="100%"
         h="100%"
+        maxW="100vw"
         minH="100vh"
         templateRows={["auto 75px auto 200px", null, null, null, "100px 300px auto"]}
         gap={[2, 2, 0]}
@@ -53,26 +54,26 @@ export default function Home() {
         alignItems="start"
         alignContent={["start", null, null, null, "center"]}
       >
-        <GridItem rowSpan={["1", null, null, null, "3"]} justifySelf="center" marginTop={[0, null, null, null, 5]}>
+        <GridItem rowSpan={["1", null, null, null, "3"]} justifySelf="center" marginTop={[0, null, 3, null, 5]} w={["100%", null, null, null, 24]} justify="center" maxW="100vw">
           <Menu selected={"home"}/>
         </GridItem>
-        <GridItem alignSelf="center">
+        <GridItem alignSelf="center" maxW="100vw">
           <SearchBar text={"Search for movies or TV series"}/>
         </GridItem>
         
         {searchTerm === "" &&
         <> 
-        <GridItem>
+        <GridItem maxW="100vw">
           <Trending data={data} ></Trending>
         </GridItem>
-        <GridItem >
+        <GridItem maxW="100vw">
           <Recommended data={data}  text={"Recommended for you"} marginTop={[5, 5, 10]}/>
         </GridItem>
         </>
         }
 
         {searchTerm !== "" && 
-        <GridItem >
+        <GridItem maxW="100vw">
           <Recommended data={data}  text={"Recommended for you"} marginTop={[5, 5, 10]}/>
         </GridItem>}
       </Grid>

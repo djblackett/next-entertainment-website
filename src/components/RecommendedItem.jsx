@@ -14,8 +14,8 @@ function RecommendedItem({ item }) {
   return (
     <>
       <AspectRatio
-        w={["150px", "280px"]}
-        h={["100px", "174px"]}
+        w={["164px", null, "220px", null, "280px"]}
+        h={["110px", null, "140px", null, "174px"]}
         // ratio={1.5 / 1}
         // marginRight={[3, 3, "3rem"]}
 

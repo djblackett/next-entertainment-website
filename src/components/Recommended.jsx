@@ -46,7 +46,8 @@ function Recommended({ text, filter, marginTop }) {
 
   return (
     <Flex
-      w="100%"
+      w="auto"
+      maxW="100vw"
       marginTop={marginTop}
       direction="column"
       h="100%"
@@ -56,24 +57,29 @@ function Recommended({ text, filter, marginTop }) {
         color="white"
         fontWeight="300"
         marginBottom={[5, 5, 5]}
-        marginLeft={[4, 4, 0]}
+        marginLeft={[4, null, null, null, 0]}
       >
         {search === "" ? text : `Found ${count} results for '${search}'`}
       </Heading>
       <Grid
         w="100%"
         h="100%"
+        maxW={"95vw"}
         objectFit="fill"
-        justifyItems={["center", "center", "start"]}
+        // justifyItems={["center", null, null, null, "start"]}
+        justifyContent={["space-between"]}
         className="no-class"
         templateColumns={[
-          "repeat(2, 1fr)",
+          "repeat(2, 164px)",
           null,
-          "repeat(3, 1fr)",
-          "repeat(4, 1fr)",
+          "repeat(3, 220px)",
+          null,
+          "repeat(4, 280px)",
         ]}
         templateRows="auto"
-        gap={[2, 4, 6]}
+        marginLeft={5}
+        marginRight={5}
+        gap={5}
       >
         {filteredVidoes.map((item) => {
           return (
