@@ -135,7 +135,7 @@ const Menu = () => {
           </a>
         </Link>
       </Flex2>
-      <Spacer display={["none"]} />
+      <Spacer1 />
       <Avatar
         name="The Dude"
         src="assets/image-avatar.png"
