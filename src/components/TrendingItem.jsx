@@ -8,6 +8,14 @@ const MovieBox = styled(Flex)`
   &:hover .play-button {
     display: flex;
   }
+
+  &:hover .overlay {
+    display: initial;
+  }
+`;
+
+const Overlay = styled(Box)`
+  display: none;
 `;
 
 function TrendingItem({ item }) {
@@ -30,6 +38,13 @@ function TrendingItem({ item }) {
       position="relative"
       tabIndex="0"
     >
+      <Overlay
+        className="overlay"
+        w="100%"
+        h="100%"
+        backgroundColor="rgba(0, 0, 0, 0.5)"
+        zIndex="0"
+      />
       <BookmarkButton item={item} />
       <PlayButton />
       <Information item={item} position={"absolute"} />

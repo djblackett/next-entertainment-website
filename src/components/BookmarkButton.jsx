@@ -40,19 +40,17 @@ function BookmarkButton({ item }) {
         tabIndex="0"
       >
         <Icon
-          // w={3}
-          // h={4}
           stroke="#FFF"
+          strokeWidth={item.isBookmarked ? "0" : "1.5"}
           fill="#FFF"
           align="center"
           justify="center"
-          // boxSize={[4, 5, 7]}
-          viewBox="0 0 11.67 14"
+          boxSize={[3]}
+          viewBox="0 0 12 14"
           display="flex"
-          // objectFit="fill"
           _groupHover={{
-            // fill: "rgba(0, 0, 0, 0.5)",
             stroke: "black",
+            strokeWidth: "1.5",
           }}
         >
           {item.isBookmarked ? bookmarkFull : bookmarkEmpty}
