@@ -24,7 +24,7 @@ const Grid1 = styled(Grid)`
   @media (min-width: 1350px) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 2.7%;
-    padding-left: 0;
+    padding-left: 16px;
     padding-right: 16px;
     max-width: 88.6vw;
   }
