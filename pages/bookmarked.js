@@ -5,7 +5,7 @@ import SearchBar from "../src/components/SearchBar";
 import Recommended from "../src/components/Recommended";
 import styles from "../styles/Home.module.css";
 
-import {Grid1, GridItem1} from './index';
+import {Grid1, GridItem1, css} from './index';
 
 function Bookmarked() {
   return (
@@ -25,28 +25,28 @@ function Bookmarked() {
       </Head>
 
       <Grid1
-        css="css"
+        css={css}
         className="no-scroll"
         w="100%"
         h="100%"
         minH="100vh"
-        templateRows="auto, 70px, auto 200px"
-        // gridAutoRows="auto"
+        templateRows="auto 75px auto 200px"
         gap={[2, 2, 0]}
         bg="#10141E"
         templateColumns="1fr"
         overflowX="hidden"
         alignItems="start"
         alignContent="start"
-        // position="relative"
+        
       >
         <GridItem1
           rowSpan="1"
+          display="flex"
           justifySelf="center"
           marginTop={[0, null, 3]}
           w="100%"
-          justify="center"
-          maxW="100%"
+          // justify="center"
+          maxW="100vw"
         >
           <Menu />
         </GridItem1>

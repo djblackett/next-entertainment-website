@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import { selectSearchTerm } from "../src/features/searchSlice";
 import styled from "@emotion/styled";
 
-const css = {
+export const css = {
     '&::-webkit-scrollbar': {
       display: 'none',
     },
@@ -66,9 +66,8 @@ export default function Home() {
         className="no-scroll"
         w="100%"
         h="100%"
-        maxW="100%"
         minH="100vh"
-        templateRows={"auto 75px auto 200px"}
+        templateRows="auto 75px auto 200px"
         gap={[2, 2, 0]}
         bg="#10141E"
         templateColumns={"1fr"}
@@ -76,7 +75,7 @@ export default function Home() {
         alignItems="start"
         alignContent={"start"}
       >
-        <GridItem1 rowSpan="1" display="flex" justifySelf="center" marginTop={[0, null, 3]} w={"100%"}  maxW="100vw">
+        <GridItem1 rowSpan="1" display="flex" justifySelf="center" marginTop={[0, null, 3]} w="100%"  maxW="100vw">
           <Menu selected={"home"}/>
         </GridItem1>
         <GridItem alignSelf="center" maxW="100%">

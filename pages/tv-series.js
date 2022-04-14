@@ -5,6 +5,8 @@ import SearchBar from "../src/components/SearchBar";
 import Recommended from "../src/components/Recommended";
 import styles from "../styles/Home.module.css";
 
+import { Grid1, GridItem1, css } from "./index";
+
 function TVSeries() {
   return (
     <div className={styles.container}>
@@ -22,31 +24,31 @@ function TVSeries() {
         <title>Frontend Mentor | Entertainment web app</title>
       </Head>
 
-      <Grid
-        css="css"
+      <Grid1
+        css={css}
         className="no-scroll"
         w="100%"
         h="100%"
-        minH="100vh"
-        templateRows={["auto auto auto", "100px auto auto"]}
-        gridAutoRows={["200px", "556px"]}
+        // minH="100vh"
+        templateRows={["auto 75px auto 200px"]}
+        // gridAutoRows={["200px", "556px"]}
         gap={[2, 2, 0]}
         bg="#10141E"
-        templateColumns={["1fr", null, null, null, "164px 1fr"]}
+        templateColumns={["1fr"]}
         overflowX="hidden"
         alignItems="start"
-        alignContent={["start", null, null, null, "center"]}
+        alignContent={"start"}
       >
-        <GridItem
-          rowSpan={["1", null, null, null, "3"]}
+        <GridItem1
+          rowSpan="1"
+          display="flex"
           justifySelf="center"
-          marginTop={[0, null, 3, null, 5]}
-          w={["100%", null, null, null, 24]}
-          justify="center"
-          maxW="100%"
+          marginTop={[0, null, 3]}
+          w="100%"
+          maxW="100vw"
         >
           <Menu />
-        </GridItem>
+        </GridItem1>
         <GridItem alignSelf="center">
           <SearchBar text={"Search for TV series"} />
         </GridItem>
@@ -57,7 +59,7 @@ function TVSeries() {
             marginTop={[5, 5, 0]}
           />
         </GridItem>
-      </Grid>
+      </Grid1>
     </div>
   );
 }
