@@ -21,7 +21,8 @@ function Trending({ data }) {
       direction="column"
       align="flex-start"
       overflowX="scroll"
-      marginLeft={[4, null, null, null, 0]}
+      // marginLeft={[4, null, null, null, 0]}
+      paddingLeft={[4, null, 8, null, 0]}
       maxWidth={["100vw", null, null, null, "1400px"]}
     >
       <Heading h="40px" color="white" marginBottom={5} fontWeight="300">

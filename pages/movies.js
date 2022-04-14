@@ -32,15 +32,18 @@ function Bookmarked() {
         gridAutoRows={["200px", "556px"]}
         gap={[2, 2, 0]}
         bg="#10141E"
-        templateColumns={["1fr", "1fr", "120px 1fr"]}
+        templateColumns={["1fr", null, null, null, "164px 1fr"]}
         overflowX="hidden"
         alignItems="start"
-        alignContent={["start", "start", "center"]}
+        alignContent={["start", null, null, null, "center"]}
       >
         <GridItem
-          rowSpan={["1", "1", "3"]}
+          rowSpan={["1", null, null, null, "3"]}
           justifySelf="center"
-          marginTop={[0, 0, 5]}
+          marginTop={[0, null, 3, null, 5]}
+          w={["100%", null, null, null, 24]}
+          justify="center"
+          maxW="100%"
         >
           <Menu />
         </GridItem>

@@ -26,7 +26,7 @@ function Information({ item, position }) {
       marginTop={2}
     >
       <Flex justify="space-between">
-        <Text fontWeight="300" fontSize={["xs", "md", "md"]}>
+        <Text fontWeight="300" fontSize={["xs", "md", "md"]} color="white">
           {item.year + " · "} &nbsp;
           <Icon viewBox="0 0 16 16" boxSize={4}>
             {item.category === "Movie" ? movieSVG : seriesSVG}
@@ -36,10 +36,11 @@ function Information({ item, position }) {
         </Text>
       </Flex>
       <Heading
-        size={["sm", "md", "lg"]}
+        // size={["md", "lg", "2rem"]}
+        fontSize={["initial", null, null, null, "1.5rem"]}
         letterSpacing="0.2"
         marginTop={["-5px", 0, 0]}
-        fontWeight="500"
+        fontWeight="600"
       >
         {item.title}
       </Heading>

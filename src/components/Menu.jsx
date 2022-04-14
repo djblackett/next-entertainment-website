@@ -4,43 +4,70 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectPage, setPage } from "../features/menuSlice";
 import { useRouter } from "next/router";
+import styled from "@emotion/styled";
+
+const Flex1 = styled(Flex)`
+  @media (min-width: 1350px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 90vh;
+    width: 96px;
+    justify-self: initial;
+    align-self: center;
+    /* margin-left: 16px; */
+  }
+`;
+
+const Flex2 = styled(Flex)`
+  @media (min-width: 1350px) {
+    flex-direction: column;
+    margin-top: 16;
+    margin-left: 0;
+  }
+`;
+
+const Icon1 = styled(Icon)`
+  @media (min-width: 1350px) {
+    margin-bottom: 60px;
+  }
+`;
 
 const Menu = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
   return (
-    <Flex
+    <Flex1
       backgroundColor="#161D2F"
       border="none"
       borderRadius={[0, null, "14px"]}
-      direction={["row", null, null, null, "column"]}
+      direction={"row"}
       align="center"
-      justifyContent={["space-between", null, null, null, "flex-start"]}
-      h={["8vh", null, null, null, "90vh"]}
-      w={["100vw", null, "100%", null, 24]}
+      justifyContent={["space-between"]}
+      h={["8vh"]}
+      w={["100%", null, "95%"]}
       p={6}
-      justifySelf={["center", null, null, null, "initial"]}
+      justifySelf="center"
       alignSelf="center"
-      marginLeft={[0, null, 5, null, 0]}
-      marginRight={[0, null, 5, null, 0]}
+      // marginLeft={[0, null, "2.5%", null, 0]}
+      // marginRight={[0, null, "2.5%", null, 0]}
     >
-      <Icon
+      <Icon1
         viewBox="0 0 32 25.6"
         boxSize={[6, 6, 8]}
-        marginBottom={[0, null, null, null, 15]}
+        marginBottom="0"
         alignSelf="center"
       >
         <path
           d="m26.463.408 3.2 6.4h-4.8l-3.2-6.4h-3.2l3.2 6.4h-4.8l-3.2-6.4h-3.2l3.2 6.4h-4.8l-3.2-6.4h-1.6a3.186 3.186 0 0 0-3.184 3.2l-.016 19.2a3.2 3.2 0 0 0 3.2 3.2h25.6a3.2 3.2 0 0 0 3.2-3.2V.408h-6.4Z"
           fill="#FC4747"
         />
-      </Icon>
-      <Flex
+      </Icon1>
+      <Flex2
         align="center"
-        direction={["row", null, null, null, "column"]}
-        marginTop={[0, null, null, null, 16]}
-        marginLeft={[5, null, null, null, 0]}
+        direction={"row"}
+        marginTop={0}
+        marginLeft={5}
         maxW={["50%", "50%", "initial"]}
       >
         <Box>
@@ -99,7 +126,7 @@ const Menu = () => {
             </Icon>
           </a>
         </Link>
-      </Flex>
+      </Flex2>
       <Spacer display={["none", null, null, null, "initial"]} />
       <Avatar
         name="The Dude"
@@ -107,7 +134,7 @@ const Menu = () => {
         h={[6, 6, 8]}
         w={[6, 6, 8]}
       />
-    </Flex>
+    </Flex1>
   );
 };
 
