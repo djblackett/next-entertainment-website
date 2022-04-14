@@ -14,7 +14,8 @@ const Flex1 = styled(Flex)`
     width: 96px;
     justify-self: initial;
     align-self: center;
-    /* margin-left: 16px; */
+    margin-left: 0;
+    margin-right: 0;
   }
 `;
 
@@ -32,6 +33,12 @@ const Icon1 = styled(Icon)`
   }
 `;
 
+const Spacer1 = styled(Spacer)`
+  @media (min-width: 1350px) {
+    display: initial;
+  }
+`;
+
 const Menu = () => {
   const dispatch = useDispatch();
   const router = useRouter();
@@ -43,14 +50,14 @@ const Menu = () => {
       borderRadius={[0, null, "14px"]}
       direction={"row"}
       align="center"
-      justifyContent={["space-between"]}
+      justifyContent="space-between"
       h={["8vh"]}
-      w={["100%", null, "95%"]}
+      w={["100%", null]}
       p={6}
       justifySelf="center"
       alignSelf="center"
-      // marginLeft={[0, null, "2.5%", null, 0]}
-      // marginRight={[0, null, "2.5%", null, 0]}
+      marginLeft={[0, null, "32px", null, "16px"]}
+      marginRight={[0, null, "32px", null, "16px"]}
     >
       <Icon1
         viewBox="0 0 32 25.6"
@@ -69,6 +76,7 @@ const Menu = () => {
         marginTop={0}
         marginLeft={5}
         maxW={["50%", "50%", "initial"]}
+        justifySelf="center"
       >
         <Box>
           <Link href="/">
@@ -127,7 +135,7 @@ const Menu = () => {
           </a>
         </Link>
       </Flex2>
-      <Spacer display={["none", null, null, null, "initial"]} />
+      <Spacer display={["none"]} />
       <Avatar
         name="The Dude"
         src="assets/image-avatar.png"

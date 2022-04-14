@@ -35,6 +35,7 @@ const css = {
     align-items: center;
     justify-content: center;
     justify-items: center;
+    
   }
   
   `;
@@ -75,7 +76,7 @@ export default function Home() {
         alignItems="start"
         alignContent={"start"}
       >
-        <GridItem1 rowSpan="1" justifySelf="center" marginTop={[0, null, 3, null, 5]} w={"100%"} justify="center" maxW="100%">
+        <GridItem1 rowSpan="1" display="flex" justifySelf="center" marginTop={[0, null, 3]} w={"100%"}  maxW="100vw">
           <Menu selected={"home"}/>
         </GridItem1>
         <GridItem alignSelf="center" maxW="100%">

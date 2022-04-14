@@ -27,7 +27,7 @@ function Trending({ data }) {
       overflowX="scroll"
       // marginLeft={[4, null, null, null, 0]}
       paddingLeft={[4, null, 8, null, 4]}
-      maxWidth={["100vw", null, null, null, "1400px"]}
+      maxWidth={["100vw", null, null, null]}
     >
       <Heading h="40px" color="white" marginBottom={5} fontWeight="300">
         Trending
