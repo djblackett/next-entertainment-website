@@ -18,12 +18,18 @@ const MovieBox = styled(Flex)`
 const Overlay=styled(Box)`
   display: none;
 `
+const AspectRatio1 = styled(AspectRatio)`
+  @media (min-width: 1350px) {
+    max-width: 280px;
+  }
+
+`
 
 function RecommendedItem({ item }) {
   return (
     <>
-      <AspectRatio
-        minW={["164px",]}
+      <AspectRatio1
+        minW="164px"
         // maxW={["350px", null, null]}
         // h={["110px", "140px", null, "174px"]}
         ratio={1 / 0.68}
@@ -61,7 +67,7 @@ function RecommendedItem({ item }) {
             <BookmarkButton item={item} zIndex="2" />
           
         </MovieBox>
-      </AspectRatio>
+      </AspectRatio1>
       <Information item={item} position="block" />
     </>
   );

@@ -23,9 +23,10 @@ const Grid1 = styled(Grid)`
 
   @media (min-width: 1350px) {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 40px;
+    column-gap: 2.7%;
     padding-left: 0;
     padding-right: 16px;
+    max-width: 88.6vw;
   }
 `;
 
@@ -72,14 +73,14 @@ function Recommended({ text, filter, marginTop }) {
         color="white"
         fontWeight="300"
         marginBottom={[5, 5, 5]}
-        paddingLeft={[4, null, 8, null, 0]}
+        paddingLeft={[4, null, 8, null, 4]}
       >
         {search === "" ? text : `Found ${count} results for '${search}'`}
       </Heading>
       <Grid1
         w="100%"
         h="100%"
-        maxWidth="1304px"
+        maxWidth="1350px"
         // maxW={"1240px"}
         // objectFit="fill"
         // justifyItems={["center", null, null, null, "start"]}

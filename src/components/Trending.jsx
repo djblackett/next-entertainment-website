@@ -6,9 +6,12 @@ import { selectSearchTerm } from "../features/searchSlice";
 const css = {
   "&::-webkit-scrollbar": {
     display: "none",
+    height: 0,
+    width: 0,
   },
   ".no-class": {
-    "-ms-overflow-style": "none",
+    msOverflowStyle: "none",
+    scrollbarWidth: "none" /* Firefox */,
   },
 };
 
@@ -17,19 +20,20 @@ function Trending({ data }) {
   return (
     <Flex
       css={css}
+      style={{ scrollbarWidth: "none" }}
       className="no-scroll"
       direction="column"
       align="flex-start"
       overflowX="scroll"
       // marginLeft={[4, null, null, null, 0]}
-      paddingLeft={[4, null, 8, null, 0]}
+      paddingLeft={[4, null, 8, null, 4]}
       maxWidth={["100vw", null, null, null, "1400px"]}
     >
       <Heading h="40px" color="white" marginBottom={5} fontWeight="300">
         Trending
       </Heading>
       <Flex
-        css={css}
+        // css={css}
         className="no-scroll"
         direction="row"
         justify="space-between"
