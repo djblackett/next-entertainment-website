@@ -30,7 +30,7 @@ function TVSeries() {
         w="100%"
         h="100%"
         // minH="100vh"
-        templateRows={["auto 75px auto 200px"]}
+        templateRows={["auto 65px auto 200px"]}
         // gridAutoRows={["200px", "556px"]}
         gap={[2, 2, 0]}
         bg="#10141E"
@@ -53,11 +53,7 @@ function TVSeries() {
           <SearchBar text={"Search for TV series"} />
         </GridItem>
         <GridItem>
-          <Recommended
-            text={"TV Series"}
-            filter={"series"}
-            marginTop={[5, 5, 0]}
-          />
+          <Recommended text={"TV Series"} filter={"series"} marginTop="0" />
         </GridItem>
       </Grid1>
     </div>

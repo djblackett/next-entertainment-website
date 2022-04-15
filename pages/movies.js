@@ -30,7 +30,7 @@ function Bookmarked() {
         w="100%"
         h="100%"
         // minH="100vh"
-        templateRows={["auto 75px auto 200px"]}
+        templateRows={["auto 65px auto 200px"]}
         // gridAutoRows={["200px", "556px"]}
         gap={[2, 2, 0]}
         bg="#10141E"
@@ -54,11 +54,7 @@ function Bookmarked() {
           <SearchBar text={"Search for movies"} />
         </GridItem>
         <GridItem>
-          <Recommended
-            text={"Movies"}
-            filter={"movies"}
-            marginTop={[5, 5, 0]}
-          />
+          <Recommended text={"Movies"} filter={"movies"} marginTop="0" />
         </GridItem>
       </Grid1>
     </div>

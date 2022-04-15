@@ -67,7 +67,7 @@ export default function Home() {
         w="100%"
         h="100%"
         minH="100vh"
-        templateRows="auto 75px auto 200px"
+        templateRows="auto 65px auto 200px"
         gap={[2, 2, 0]}
         bg="#10141E"
         templateColumns={"1fr"}
