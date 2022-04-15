@@ -26,7 +26,7 @@ const Grid1 = styled(Grid)`
     column-gap: 2.7%;
     padding-left: 16px;
     padding-right: 16px;
-    max-width: 88.6vw;
+    max-width: 87vw;
   }
 `;
 

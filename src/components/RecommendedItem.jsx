@@ -15,15 +15,14 @@ const MovieBox = styled(Flex)`
   }
 `;
 
-const Overlay=styled(Box)`
+const Overlay = styled(Box)`
   display: none;
-`
+`;
 const AspectRatio1 = styled(AspectRatio)`
   @media (min-width: 1350px) {
     max-width: 280px;
   }
-
-`
+`;
 
 function RecommendedItem({ item }) {
   return (
@@ -61,11 +60,10 @@ function RecommendedItem({ item }) {
             h="100%"
             backgroundColor="rgba(0, 0, 0, 0.5)"
             zIndex="0"
-
+            borderRadius="10px"
           />
-            <PlayButton zIndex="2"/>
-            <BookmarkButton item={item} zIndex="2" />
-          
+          <PlayButton zIndex="2" />
+          <BookmarkButton item={item} zIndex="2" />
         </MovieBox>
       </AspectRatio1>
       <Information item={item} position="block" />

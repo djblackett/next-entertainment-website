@@ -34,6 +34,8 @@ const Icon1 = styled(Icon)`
 `;
 
 const Spacer1 = styled(Spacer)`
+  display: none;
+
   @media (min-width: 1350px) {
     display: initial;
   }

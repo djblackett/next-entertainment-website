@@ -44,6 +44,7 @@ function TrendingItem({ item }) {
         h="100%"
         backgroundColor="rgba(0, 0, 0, 0.5)"
         zIndex="0"
+        borderRadius="10px"
       />
       <BookmarkButton item={item} />
       <PlayButton />
