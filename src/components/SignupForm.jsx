@@ -1,18 +1,9 @@
-import {
-  Heading,
-  Input,
-  Button,
-  Text,
-  Link,
-  InputGroup,
-  InputRightElement,
-} from "@chakra-ui/react";
-import styled from "@emotion/styled";
+import { Text, Link } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
-import { LoginHeading, LoginButton, LoginInput } from "./LoginForm";
+import { LoginHeading, LoginButton } from "./LoginForm";
 import { useRouter } from "next/router";
 import LoginInputCustom from "./LoginInput";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { authenticate } from "../features/userSlice";
 
 function SignupForm() {

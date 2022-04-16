@@ -1,6 +1,6 @@
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
-import React, { useState } from "react";
+import React from "react";
 import { handleChange } from "../features/searchSlice";
 import { useDispatch } from "react-redux";
 

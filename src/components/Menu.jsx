@@ -1,8 +1,6 @@
 import { Icon, Avatar, Flex, Spacer, Box } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectPage, setPage } from "../features/menuSlice";
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 
@@ -42,7 +40,6 @@ const Spacer1 = styled(Spacer)`
 `;
 
 const Menu = () => {
-  const dispatch = useDispatch();
   const router = useRouter();
 
   return (

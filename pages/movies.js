@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { GridItem } from "@chakra-ui/react";
 import Head from "next/head";
 import Menu from "../src/components/Menu";
 import SearchBar from "../src/components/SearchBar";
@@ -42,9 +42,7 @@ function Movies() {
         className="no-scroll"
         w="100%"
         h="100%"
-        // minH="100vh"
         templateRows={["auto 65px auto 200px"]}
-        // gridAutoRows={["200px", "556px"]}
         gap={[2, 2, 0]}
         bg="#10141E"
         templateColumns={["1fr"]}
@@ -58,7 +56,6 @@ function Movies() {
           justifySelf="center"
           marginTop={[0, null, 3]}
           w="100%"
-          // justify="center"
           maxW="100vw"
         >
           <Menu />

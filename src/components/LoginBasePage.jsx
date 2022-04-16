@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import { Box, Icon, Flex } from "@chakra-ui/react";
+import { Icon, Flex } from "@chakra-ui/react";
 
 function LoginBasePage({ children }) {
   return (
@@ -7,7 +6,6 @@ function LoginBasePage({ children }) {
       <Icon
         viewBox="0 0 32 25.6"
         boxSize={[8, 8, 8]}
-        // marginBottom="0"
         alignSelf="center"
         m={["40px", "48px", "88px", null, "78px"]}
       >
@@ -23,7 +21,6 @@ function LoginBasePage({ children }) {
         maxH="420"
         maxW={["100%", null, "60%", "50%"]}
         direction="column"
-        // m="10"
         borderRadius="10px"
         justify="space-between"
         align="center"

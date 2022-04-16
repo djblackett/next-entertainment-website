@@ -7,7 +7,6 @@ import Trending from "../src/components/Trending";
 import React, {useEffect, useState} from 'react';
 import Recommended from "../src/components/Recommended";
 import { selectMovies } from "../src/features/moviesSlice";
-
 import { selectSearchTerm } from "../src/features/searchSlice";
 import styled from "@emotion/styled";
 import {useRouter} from 'next/router';
@@ -71,7 +70,7 @@ export default function Home() {
         />
         <title>Frontend Mentor | Entertainment web app</title>
       </Head>
-      
+
       <Grid1
         css={css}
         className="no-scroll"

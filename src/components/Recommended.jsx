@@ -2,19 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Heading, Grid, GridItem, Box, Flex } from "@chakra-ui/react";
 import RecommendedItem from "./RecommendedItem";
 import styled from "@emotion/styled";
-
 import { useSelector } from "react-redux";
 import { selectMovies } from "../features/moviesSlice";
 import { selectSearchTerm } from "../features/searchSlice";
-
-const css = {
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
-  ".no-class": {
-    "-ms-overflow-style": "none",
-  },
-};
 
 const Grid1 = styled(Grid)`
   @media (max-width: 350px) {
@@ -67,7 +57,6 @@ function Recommended({ text, filter, marginTop }) {
       direction="column"
       h="100%"
       marginBottom={5}
-      // alignItems="center"
     >
       <Heading
         color="white"
@@ -81,22 +70,9 @@ function Recommended({ text, filter, marginTop }) {
         w="100%"
         h="100%"
         maxWidth="1350px"
-        // maxW={"1240px"}
-        // objectFit="fill"
-        // justifyItems={["center", null, null, null, "start"]}
-        // justifyContent={[
-        //   "space-between",
-        //   //"space-around",
-        //   "start",
-        //   "space-between",
-        //   //"space-around",
-        //   "start",
-        //   "space-between",
-        // ]}
         justifyContent="space-between"
         className="no-class"
         templateColumns={["repeat(2, 1fr)", null, "repeat(3, 1fr)"]}
-        // templateRows="auto"
         paddingLeft={[4, null, 8, null, 4]}
         paddingRight={[4, null, 8, null, 4]}
         columnGap={[2, 8]}

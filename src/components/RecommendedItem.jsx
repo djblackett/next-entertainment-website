@@ -1,4 +1,4 @@
-import { Box, Flex, AspectRatio, Image } from "@chakra-ui/react";
+import { Box, Flex, AspectRatio } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import BookmarkButton from "./BookmarkButton";
 import Information from "./Information";
@@ -26,15 +26,7 @@ const AspectRatio1 = styled(AspectRatio)`
 function RecommendedItem({ item }) {
   return (
     <>
-      <AspectRatio1
-        minW="164px"
-        // maxW={["350px", null, null]}
-        // h={["110px", "140px", null, "174px"]}
-        ratio={1 / 0.68}
-        // marginRight={[3, 3, "3rem"]}
-
-        cursor="pointer"
-      >
+      <AspectRatio1 minW="164px" ratio={1 / 0.68} cursor="pointer">
         <MovieBox
           alt={item.title}
           backgroundImage={[
@@ -42,7 +34,6 @@ function RecommendedItem({ item }) {
             `url(${item.thumbnail.regular.medium})`,
             `url(${item.thumbnail.regular.large})`,
           ]}
-          // height="100%"
           width="100%"
           borderRadius="10px"
           backgroundSize="100% 100%"

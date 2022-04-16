@@ -1,4 +1,4 @@
-import { Flex, Icon, Box, Button } from "@chakra-ui/react";
+import { Icon, Box, Button } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 import { toggleBookmarked } from "../features/moviesSlice";
 

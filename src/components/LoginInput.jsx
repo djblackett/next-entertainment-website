@@ -9,7 +9,6 @@ const InputContainer = styled.div`
     
 `
 
-
 const InputField = styled.input`
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background: transparent;
@@ -28,7 +27,6 @@ const InputField = styled.input`
     
   }
 `
-
 const Text = styled.p`
   color: red;
   position: absolute;
@@ -39,20 +37,14 @@ const Text = styled.p`
 
 `
 
-
 function LoginInputCustom({valid, errorText, placeholder, handleChange, type, id}) {
 
   return (
-<InputContainer>
-    <InputField placeholder={placeholder} type={type} style={{borderBottomColor: valid ? "rgba(255, 255, 255, 0.5)" : "red"}} onChange={handleChange} className={id} />
-    {!valid && <Text>{errorText}</Text>}
-  </InputContainer>
-    
-    
-
-    
+    <InputContainer>
+      <InputField placeholder={placeholder} type={type} style={{borderBottomColor: valid ? "rgba(255, 255, 255, 0.5)" : "red"}} onChange={handleChange} className={id} />
+      {!valid && <Text>{errorText}</Text>}
+    </InputContainer>
   )
-
 }
 
 export default LoginInputCustom;
