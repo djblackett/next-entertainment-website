@@ -25,7 +25,6 @@ function Trending({ data }) {
       direction="column"
       align="flex-start"
       overflowX="scroll"
-      // marginLeft={[4, null, null, null, 0]}
       paddingLeft={[4, null, 8, null, 4]}
       paddingRight="4"
       maxWidth={["100vw", null, null, null, "1400px"]}
@@ -34,15 +33,12 @@ function Trending({ data }) {
         Trending
       </Heading>
       <Flex
-        // css={css}
         className="no-scroll"
         direction="row"
         justify="space-between"
-        // overflowX="scroll"
         overflowY="visible"
         h="auto"
         w="auto"
-        // maxW="100%"
         style={{ scrollbarWidth: "none" }}
         paddingop={2}
         paddingBottom={2}

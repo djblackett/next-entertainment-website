@@ -4,12 +4,15 @@ import styles from "../styles/Home.module.css";
 import Menu from "../src/components/Menu";
 import { Grid, GridItem } from "@chakra-ui/react";
 import Trending from "../src/components/Trending";
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Recommended from "../src/components/Recommended";
 import { selectMovies } from "../src/features/moviesSlice";
-import { useSelector } from "react-redux";
+
 import { selectSearchTerm } from "../src/features/searchSlice";
 import styled from "@emotion/styled";
+import {useRouter} from 'next/router';
+import { selectIsAuthenticated } from "../src/features/userSlice";
+import { useSelector } from "react-redux";
 
 export const css = {
     '&::-webkit-scrollbar': {
@@ -42,6 +45,15 @@ export const css = {
 
 export default function Home() {
 
+  const router = useRouter();
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+
+  useEffect(() => {
+    // global authenticated state
+    if (!isAuthenticated) {
+      router.push("/login");
+    }
+  }, []);
   
   const data = useSelector(selectMovies);
   const searchTerm = useSelector(selectSearchTerm);
@@ -51,16 +63,15 @@ export default function Home() {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
           href="./assets/favicon-32x32.png"
         />
-
         <title>Frontend Mentor | Entertainment web app</title>
       </Head>
+      
       <Grid1
         css={css}
         className="no-scroll"

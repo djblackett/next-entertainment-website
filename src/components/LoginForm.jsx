@@ -3,6 +3,8 @@ import styled from "@emotion/styled";
 import React, {useState, useEffect} from 'react';
 import { useRouter } from "next/router";
 import LoginInputCustom from "./LoginInput";
+import { useDispatch, useSelector } from "react-redux";
+import {authenticate} from '../features/userSlice';
 
 export const LoginInput = styled(Input)`
   border-top: none;
@@ -42,7 +44,8 @@ export const LoginButton = styled(Button)`
   
 
 function LoginForm() {
-const router = useRouter()
+const router = useRouter();
+const dispatch = useDispatch();
   
 
   const [passwordValid, setPasswordValid] = useState(true);
@@ -79,6 +82,7 @@ const handleClick = () => {
     }
     
     if (username !== "" && password !== ""){
+      dispatch(authenticate());
       router.push("/");
     }
   }

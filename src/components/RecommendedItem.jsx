@@ -1,6 +1,5 @@
 import { Box, Flex, AspectRatio, Image } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import { initScriptLoader } from "next/script";
 import BookmarkButton from "./BookmarkButton";
 import Information from "./Information";
 import PlayButton from "./PlayButton";

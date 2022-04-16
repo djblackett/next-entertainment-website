@@ -4,10 +4,23 @@ import Menu from "../src/components/Menu";
 import SearchBar from "../src/components/SearchBar";
 import Recommended from "../src/components/Recommended";
 import styles from "../styles/Home.module.css";
-
+import { useRouter } from "next/router";
+import { selectIsAuthenticated } from "../src/features/userSlice";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 import { Grid1, GridItem1, css } from "./index";
 
-function Bookmarked() {
+function Movies() {
+  const router = useRouter();
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+
+  useEffect(() => {
+    // global authenticated state
+    if (!isAuthenticated) {
+      router.push("/login");
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -61,4 +74,4 @@ function Bookmarked() {
   );
 }
 
-export default Bookmarked;
+export default Movies;

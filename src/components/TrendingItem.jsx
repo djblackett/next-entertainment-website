@@ -1,4 +1,4 @@
-import { Box, Image, AspectRatio, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import BookmarkButton from "./BookmarkButton";
 import Information from "./Information";

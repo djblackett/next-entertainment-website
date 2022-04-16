@@ -12,9 +12,12 @@ import React, { useState, useEffect } from "react";
 import { LoginHeading, LoginButton, LoginInput } from "./LoginForm";
 import { useRouter } from "next/router";
 import LoginInputCustom from "./LoginInput";
+import { useDispatch, useSelector } from "react-redux";
+import { authenticate } from "../features/userSlice";
 
 function SignupForm() {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const [passwordValid, setPasswordValid] = useState(true);
   const [usernameValid, setUsernameValid] = useState(true);
@@ -69,6 +72,7 @@ function SignupForm() {
       repeatedPassword !== "" &&
       repeatedPassword === password
     ) {
+      dispatch(authenticate());
       router.push("/");
     }
   };
